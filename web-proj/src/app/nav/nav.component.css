@@ -3,3 +3,33 @@
     color: white;  
 } 
 .btn-outline-primary:hover {background-color: #B4DAE2; color: white;}
+
+@media screen and (MIN-width: 600px) {
+    .search{
+        width: 50VW;
+        margin-left: 20vw;
+        height: 5vh;
+        margin-top: 5px;
+    }
+
+    .logo-peixe{
+        height: 6vh !important;
+        margin-left: 10px;
+    }
+
+    .lupa-search{
+        height: 5vh;
+        margin-top: 5px;
+    }
+
+    .btn-outline-primary{
+        border-color: white;
+         color: white;  
+         margin-left: 10vw !important;
+         height: 4vh;
+         margin-top: 10px;
+         position: fixed;
+    }
+    .btn-outline-primary:hover {background-color: #B4DAE2; color: white;}
+
+  }

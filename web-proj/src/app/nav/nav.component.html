@@ -1,22 +1,22 @@
 <nav class="navbar navbar-expand-lg" style="background-color: #c2dee4;">
     <div class="container-fluid">
         <div style="display: flex">
-            <ul class="navbar-nav me-auto mb-1" style="min-width: max-content;">
+            <ul class="navbar-nav me-auto mb-1 " style="min-width: max-content;">
                 <li class="nav-item">
-                    <a class="navbar-brand" [routerLink]="['/']"><img src="assets/icons/fish.png"
+                    <a class="navbar-brand" [routerLink]="['/home']"><img class="logo-peixe" src="assets/icons/fish.png"
                             style="height: 1.5em;"></a>
                 </li>
             </ul>
             <ul class="navbar-nav mb-1">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-1" type="search" placeholder="Pesquise.." aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit"><img src="assets/icons/search.svg"
+                <form class="d-flex form-search" role="search">
+                    <input class="form-control search me-1 " type="search" placeholder="Pesquise.." aria-label="Search">
+                    <button class="btn btn-outline-light lupa-search" type="submit"><img src="assets/icons/search.svg"
                             style="height: 1em;"></button>
                 </form>
             </ul>
             <ul class="navbar-nav me-auto mb-1">
                 <li class="nav-item">
-                    <button class="btn btn-outline-primary" type="submit"
+                    <button class="btn btn-outline-primary"  [routerLink]="['/login']" type="submit"
                         style="margin-left: 10px;"><b>Login</b></button>
                 </li>
             </ul>
