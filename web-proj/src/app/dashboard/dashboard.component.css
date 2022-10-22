@@ -1,0 +1,25 @@
+.card-subtitle {
+    width: 65px;
+    height: 25px;
+    left: 150px;
+    margin-top: 5px;
+    background: #b4dae2;
+    border-radius: 10px;
+    text-align: center;
+}
+.card-title {
+    margin-left: 4px;
+}
+.card-text {
+    margin-left: 4px;
+}
+.addBut {
+    width: 98px;
+    height: 32px;
+    padding: 2px;
+    background: #b4dae2;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: 10px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
