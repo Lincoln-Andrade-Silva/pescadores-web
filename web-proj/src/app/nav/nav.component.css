@@ -1,10 +1,14 @@
 .btn-outline-primary {
     border-color: white;
-    color: white;  
+    color: white;   
+
+
 } 
 .btn-outline-primary:hover 
 {
+
     background-color: #B4DAE2; color: white;
+
 }
 
 .nav-bar{
@@ -26,9 +30,9 @@
 
 @media screen and (MIN-width: 600px) {
     .search{
-        width: 50VW;
+        width: 50vw;
         margin-left: 20vw;
-        height: 5vh;
+        height: 50px;
         margin-top: 5px; 
         font-weight: bold;
         
@@ -41,24 +45,34 @@
     }
 
     .logo-peixe{
-        height: 6vh !important;
+        height: 60px !important;
         margin-left: 10px;
     }
 
     .lupa-search{
-        height: 5vh;
+        height: 50px;
         width: 5vw;
         margin-top: 5px;
+
+    
     }
 
     .btn-outline-primary{
         border-color: white;
          color: white;  
-         margin-left: 10vw !important;
-         height: 4vh;
+         margin-left: 8vw !important;
+         height: 40px;
          margin-top: 10px;
-         position: fixed;
+         float: right;
+        
+
     }
-    .btn-outline-primary:hover {background-color: #B4DAE2; color: white;}
+    .btn-outline-primary:hover {
+        background-color: #B4DAE2; color: white;
+
+    }
 
   }
+
+
+
