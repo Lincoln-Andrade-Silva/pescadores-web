@@ -98,7 +98,7 @@ body {
 
     border:none;
 
-    border-radius: 2px;
+    border-radius: 5px;
 
 
     border-bottom: 1px solid #e1e1e1;
@@ -184,16 +184,44 @@ body {
 
 @media screen and (MIN-width: 600px) {
 
+    .logo-fisher{
+        height: 100px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-left: 40%;
+    }
+
     .card{
         width:644px;
         height: 804px;
-        padding: 150px;
+        padding-left: 75px;
+        padding-right: 75px;
     }
 
-  
-
+    .card-content span {
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 15px !important;
+              
+        }
+    
     .card-content-area input {
         height: 50px;
      
     }
 }
+
+.card-content-area input:focus
+{
+    box-shadow: 0px 3px 4px rgb(90, 90, 90);
+}
+
+.card-content span {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+
