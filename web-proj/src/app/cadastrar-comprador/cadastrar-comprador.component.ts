@@ -10,6 +10,7 @@ export class CadastrarCompradorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

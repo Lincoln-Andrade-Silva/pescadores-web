@@ -7,7 +7,7 @@
             <div class="card-header">
                 <img class="logo-fisher" src="assets/icons/fisher.png"
                             style="height: 5em;">
-                <h2 class="text-center">Cadastrar</h2>
+                <h2 class="text-center" style="font-weight: bold;">Cadastrar</h2>
 
             </div>
 
@@ -27,7 +27,7 @@
                 </div>
                 <div class="card-content-area">
                     <span>Telefone</span>
-                    <input type="number" id="numero" autocomplete="off"   class="input-senha">
+                    <input id="telefone" onkeyup="mascaraFone(event)" />
 
                 </div>
                 <div class="card-content-area">
@@ -53,3 +53,4 @@
     </div>
 
 </body>
+

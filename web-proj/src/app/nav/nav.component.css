@@ -23,6 +23,7 @@
 }
 
 
+
 @media screen and (MIN-width: 600px) {
     .search{
         width: 50VW;
@@ -46,7 +47,7 @@
 
     .lupa-search{
         height: 5vh;
-        width: 3vw;
+        width: 5vw;
         margin-top: 5px;
     }
 

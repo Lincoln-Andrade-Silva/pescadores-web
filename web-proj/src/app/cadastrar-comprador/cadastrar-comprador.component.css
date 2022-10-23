@@ -100,7 +100,6 @@ body {
 
     border-radius: 5px;
 
-
     border-bottom: 1px solid #e1e1e1;
 
     outline: none;
@@ -182,10 +181,10 @@ body {
     color: #b4dae2 !important;
 }
 
-@media screen and (MIN-width: 600px) {
+@media screen and (min-width: 600px) {
 
     .logo-fisher{
-        height: 100px;
+        height: 7em !important;
         justify-content: center;
         display: flex;
         align-items: center;

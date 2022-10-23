@@ -99,7 +99,7 @@ body {
 
     border:none;
 
-    border-radius: 2px;
+    border-radius: 5px;
 
 
     border-bottom: 1px solid #e1e1e1;
@@ -165,7 +165,7 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    margin-left: 35%;
+    margin-left: 40%;
 }
 
 .input-senha{
@@ -186,6 +186,11 @@ body {
 
     .logo-peixe{
         height: 6em !important;
+        height: 3em;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-left: 35%;
     }
 
     .card-content span {
