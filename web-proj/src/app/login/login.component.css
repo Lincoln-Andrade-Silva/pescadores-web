@@ -25,6 +25,9 @@ body {
 
 .card {
 
+    box-shadow: 5px 4px 10px rgb(90, 90, 90);
+
+
     background-color: rgba(255, 255, 255);
 
     padding: 40px;
@@ -115,6 +118,8 @@ body {
 
     background-color: #fff;
 
+    padding-top: 50px;
+
 }
 
 .card-footer .submit{
@@ -167,4 +172,22 @@ body {
 
 .input-usuario{
     font-weight: bold;
+}
+
+@media screen and (MIN-width: 600px) {
+
+    .card{
+        width:644px;
+        height: 804px;
+        padding: 150px;
+    }
+
+    .logo-peixe{
+        height: 6em !important;
+    }
+
+    .card-content-area input {
+        height: 50px;
+     
+    }
 }

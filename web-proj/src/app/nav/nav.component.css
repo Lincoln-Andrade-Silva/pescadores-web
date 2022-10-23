@@ -2,7 +2,21 @@
     border-color: white;
     color: white;  
 } 
-.btn-outline-primary:hover {background-color: #B4DAE2; color: white;}
+.btn-outline-primary:hover 
+{
+    background-color: #B4DAE2; color: white;
+}
+
+.nav-bar{
+    box-shadow: 2px 1px 10px rgb(90, 90, 90);
+}
+
+.search:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
 
 @media screen and (MIN-width: 600px) {
     .search{
@@ -10,6 +24,13 @@
         margin-left: 20vw;
         height: 5vh;
         margin-top: 5px;
+        
+    }
+
+    .search:focus{
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
     }
 
     .logo-peixe{
@@ -19,6 +40,7 @@
 
     .lupa-search{
         height: 5vh;
+        width: 3vw;
         margin-top: 5px;
     }
 
