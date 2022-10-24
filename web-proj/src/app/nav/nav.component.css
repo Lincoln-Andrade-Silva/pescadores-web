@@ -10,6 +10,10 @@
     background-color: #B4DAE2; color: white;
 
 }
+.btn-outline-primary:active {
+    background-color: #B4DAE2; color: white;
+    border: 1px solid #fff;
+}
 
 .nav-bar{
     box-shadow: 2px 1px 10px rgb(90, 90, 90);
