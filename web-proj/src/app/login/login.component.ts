@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   entrar(){
     if(this.user.name == "admin" && this.user.pass == "0000") {
       this.localService.saveData('token', 'admin')
-      console.log(this.localService.getData('token'));
+   
       this.router.navigate(['/home']);
       this.error = false;
     } else {

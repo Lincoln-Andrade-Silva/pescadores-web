@@ -1,5 +1,8 @@
 .card-subtitle {
-    width: 65px;
+    width: fit-content;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 25px;
     left: 150px;
     margin-top: 5px;
