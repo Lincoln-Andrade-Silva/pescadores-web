@@ -1,55 +1,25 @@
 <app-nav></app-nav>
 <div style="margin-top: 3vh;">
     <div class="buttons" style="display: flex; margin-bottom: 2vh;">
-        <a href="/cadastrar/comprador" style="text-decoration: none;" class="addBut">
-            <a  style="color: white; font-size: 13px; text-decoration: none; font-weight: bold;">+ Pescador</a>
-        </a>     
-        <div class="addBut">
-            <b style="color: white; font-size: 13px;">+ Comprador</b>
-        </div>    
+        <a href="/cadastrar/pescador" style="text-decoration: none;" class="addBut">
+            <a style="color: white; font-size: 13px; text-decoration: none; font-weight: bold;">+ Pescador</a>
+        </a>
     </div>
     <br>
     <h5><img src="assets/icons/fisher.png" style="height: 4em;"><b>Pescadores</b></h5>
     <div style="margin-top: 3vh; display:flex;">
-        <div class="card" style="width: 12.5rem; height: 12.5rem; margin-left: 3vw;">
-            <div class="card-body">
-                <h5 class="card-title">Nome Pescador</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Regiao</h6>
-                <p class="card-text">text</p>
-                <a href="#" style="float: right; height: 2.5em; margin-top: 4vh;"><img src="assets/icons/wpp.png"
-                        style="height: 2.5em;"></a>
-            </div>
-        </div>
-        <div class="card" style="width: 12.5rem; height: 12.5rem; margin-left: 3vw;">
-            <div class="card-body">
-                <h5 class="card-title">Nome Pescador</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Regiao</h6>
-                <p class="card-text">text</p>
-                <a href="#" style="float: right; height: 2.5em; margin-top: 4vh;"><img src="assets/icons/wpp.png"
-                        style="height: 2.5em;"></a>
-            </div>
-        </div>
-    </div>
 
-    <h5 style="margin-top: 5vh;"><img src="assets/icons/buyer.png" style="height: 4em;"><b>Compradores</b></h5>
-    <div style="margin-top: 3vh; display: flex;">
-        <div class="card" style="width: 12.5rem; height: 12.5rem; margin-left: 3vw;">
-            <div class="card-body">
-                <h5 class="card-title">Nome Comprador</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Regiao</h6>
-                <p class="card-text">text</p>
-                <a href="#" style="float: right; height: 2.5em; margin-top: 1vh;"><img src="assets/icons/wpp.png"
-                        style="height: 2.5em;"></a>
+        <div class="filtred-cards" *ngFor="let grup of groups">
+            <div style="margin-top: 3vh; margin-left: 3vw; margin-bottom: 3vh;" class="key-grup"> <h5><b>{{grup.key}}</b></h5></div>
+
+            <div class="card" style="width: 12.5rem; height: 12.5rem; margin-left: 3vw;"
+                *ngFor="let person of grup.values">
+                <div class="card-body">
+                    <h5 class="card-title">{{person.name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{grup.key}}</h6>
+                    <p class="card-text">{{person.fishes}}</p>
+                    <a href="{{goToWpp(person.phoneNumber)}}"  target="_blank" style="float: right; height: 2.5em; margin-top: 4vh;"><img src="assets/icons/wpp.png"
+                            style="height: 2.5em;"></a>
+                </div>
             </div>
         </div>
-        <div class="card" style="width: 12.5rem; height: 12.5rem; margin-left: 3vw;">
-            <div class="card-body">
-                <h5 class="card-title">Nome Comprador</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Regiao</h6>
-                <p class="card-text">text</p>
-                <a href="#" style="float: right; height: 2.5em; margin-top: 1vh;"><img src="assets/icons/wpp.png"
-                        style="height: 2.5em;"></a>
-            </div>
-        </div>
-    </div>
-</div>
