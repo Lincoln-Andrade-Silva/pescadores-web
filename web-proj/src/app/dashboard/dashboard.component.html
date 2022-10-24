@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <div style="margin-top: 3vh;">
-    <div class="buttons" style="display: flex; margin-bottom: 2vh;">
+    <div class="buttons" style="display: flex; margin-bottom: 2vh;" *ngIf="token=='admin'">
         <a href="/cadastrar/pescador" style="text-decoration: none;" class="addBut">
             <a style="color: white; font-size: 13px; text-decoration: none; font-weight: bold;">+ Pescador</a>
         </a>

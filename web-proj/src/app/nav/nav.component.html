@@ -15,9 +15,13 @@
                 </form>
             </ul>
             <ul class="navbar-nav me-auto mb-1 login">
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="token!='admin'">
                     <button class="btn btn-outline-primary"  [routerLink]="['/login']" type="submit"
                         style="margin-left: 10px;"><b>Login</b></button>
+                </li>
+                <li class="nav-item" *ngIf="token=='admin'">
+                    <span class="btn btn-outline-primary" (click)="hehe()"
+                        style="margin-left: 10px;"><b>Deslogar</b></span>
                 </li>
             </ul>
         </div>

@@ -16,25 +16,24 @@
                 <div class="card-content-area">
 
                     <span>Usuário</span>
-                    <input type="text" id="usuario" class="input-usuario" autocomplete="off">
+                    <input type="text" id="usuario" class="input-usuario" autocomplete="off" name="name" [(ngModel)]="user.name">
                
 
                 </div>
 
                 <div class="card-content-area">
                     <span>Senha</span>
-                    <input type="password" id="password" autocomplete="off"  class="input-senha">
-                
+                    <input type="password" id="password" autocomplete="off"  class="input-senha" name="pass" [(ngModel)]="user.pass" >
                 </div>
 
             </div>
 
             <div class="card-footer">
 
-                <input type="submit" value="Entrar" class="submit">
+                <span class="submit" (click)="entrar()">Entrar</span>
 
                 <a class="recuperar_senha">Entrar sem registro ?</a>
-                <a href="/home" class="clique-aqui">Clique aqui</a>
+                <a (click)="entrarSemLogin()" class="clique-aqui">Clique aqui</a>
 
             </div>
 
