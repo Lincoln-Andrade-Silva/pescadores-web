@@ -13,28 +13,34 @@
                 <form class="form">
 
                     <div class="card-content-area">
-                        <span>Nome</span>
+                        <mat-label>Nome</mat-label>
                         <input matInput required type="text" name="name" id="usuario" class="input-usuario"
                             [(ngModel)]="fisher.name" autocomplete="off">
                     </div>
 
-                    <div class="card-content-area">
-                        <span>Região</span>
-                        <input matInput required name="region" type="text" id="regiao" autocomplete="off" class="input-senha"
+                    <mat-form-field  class="card-content-area" >
+                        <mat-label>Região</mat-label>
+                        <mat-select matSelect name="region" id="region"
                             [(ngModel)]="fisher.region">
-                    </div>
+                            <mat-option *ngFor="let state of states" [value]="state.name">
+                                {{state.initials}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
 
                     <div class="card-content-area">
                         <span>Telefone</span>
-                        <input matInput required id="telefone" onkeyup="mascaraFone(event)" name="phoneNumber" [(ngModel)]="fisher.phoneNumber" />
+                        <input matInput required id="telefone" onkeyup="mascaraFone(event)" name="phoneNumber"
+                            [(ngModel)]="fisher.phoneNumber" />
                     </div>
 
                     <div class="card-content-area">
                         <span>Peixes</span>
-                        <input matInput required name="fishes" type="text" id="password" autocomplete="off" class="input-senha"
-                            [(ngModel)]="fisher.fishes">
+                        <input matInput required name="fishes" type="text" id="password" autocomplete="off"
+                            class="input-senha" [(ngModel)]="fisher.fishes">
 
                     </div>
+                    
                 </form>
             </div>
 

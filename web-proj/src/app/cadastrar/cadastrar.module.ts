@@ -5,6 +5,7 @@ import { CadastrarComponent } from "./cadastrar.component";
 import { CadastrarRotas } from "./cadastrar.routes";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
       RouterModule.forChild(CadastrarRotas),
       FormsModule,
       ReactiveFormsModule,
-      MatFormFieldModule
+      MatFormFieldModule,
+      MatSelectModule,
     ]
   })
   export class CadastrarModule { }
