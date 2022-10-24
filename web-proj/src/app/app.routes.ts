@@ -16,7 +16,7 @@ export const AppRotas :  Routes = [
         loadChildren: () => import('./dashboard/dashboard.module').then(x => x.DashboardModule)
     },
     {
-        path: 'cadastrar/comprador',
-        loadChildren: () => import('./cadastrar-comprador/cadastrar-comprador.module').then(x => x.CadastrarCompradorModule)
+        path: 'cadastrar/pescador',
+        loadChildren: () => import('./cadastrar/cadastrar.module').then(x => x.CadastrarModule)
     }
 ]
