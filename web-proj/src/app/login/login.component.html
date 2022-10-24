@@ -25,7 +25,10 @@
                     <span>Senha</span>
                     <input type="password" id="password" autocomplete="off"  class="input-senha" name="pass" [(ngModel)]="user.pass" >
                 </div>
+            </div>
 
+            <div class="card-content-area" style="text-align: center;">
+                <b style="color: rgb(179, 21, 21);" *ngIf="error">Usuário e/ou senha errados !</b>
             </div>
 
             <div class="card-footer">
