@@ -32,7 +32,7 @@ export class DashboardComponent implements OnInit {
       number = personNumber.replace("(", "");
       number = number.replace("-", "");
       number = number.replace(")", "");
-      string = "https://api.whatsapp.com/send?phone="+number+"&text=Olá%20vim pelo Site !"
+      string = "https://api.whatsapp.com/send?phone=+55"+number+"&text=Olá%20vim pelo Site !"
       console.log(string)
       return string;
     }
