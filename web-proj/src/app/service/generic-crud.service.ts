@@ -22,14 +22,14 @@ export class genericCRUD<T> {
   }
 
 
-  incluir(tipo : T) : Observable<any> {
+  incluir(tipo : T) : Observable<T> {
 
-    return this.http.post<T>(this.url, tipo);
+    return this.http.post<T>(this.url+"/create", tipo);
 
   }
 
 
-  atualizar(id: string, tipo : T) : Observable<any> {
+  atualizar(id: string, tipo : T) : Observable<T> {
 
     const path = `${this.url}/${id}`;
 
@@ -38,7 +38,7 @@ export class genericCRUD<T> {
   }
 
 
-  excluir(id? : string) : Observable<any> {
+  excluir(id? : string) : Observable<T> {
 
     const path = `${this.url}/${id}`;
 

@@ -14,21 +14,25 @@
 
                     <div class="card-content-area">
                         <span>Nome</span>
-                        <input type="text" id="usuario" class="input-usuario" autocomplete="off" matInput>
+                        <input matInput required type="text" name="name" id="usuario" class="input-usuario"
+                            [(ngModel)]="fisher.name" autocomplete="off">
                     </div>
 
                     <div class="card-content-area">
                         <span>Região</span>
-                        <input type="text" id="regiao" autocomplete="off" class="input-senha" matInput>
+                        <input matInput required name="region" type="text" id="regiao" autocomplete="off" class="input-senha"
+                            [(ngModel)]="fisher.region">
                     </div>
+
                     <div class="card-content-area">
                         <span>Telefone</span>
-                        <input id="telefone" onkeyup="mascaraFone(event)" />
-
+                        <input matInput required id="telefone" onkeyup="mascaraFone(event)" name="phoneNumber" [(ngModel)]="fisher.phoneNumber" />
                     </div>
+
                     <div class="card-content-area">
                         <span>Peixes</span>
-                        <input type="text" id="password" autocomplete="off" class="input-senha">
+                        <input matInput required name="fishes" type="text" id="password" autocomplete="off" class="input-senha"
+                            [(ngModel)]="fisher.fishes">
 
                     </div>
                 </form>
@@ -36,11 +40,10 @@
 
             <div class="card-footer">
 
-                <input type="submit" value="Cadastrar" class="submit">
+                <input type="submit" value="Cadastrar" class="submit" (click)="create()">
 
                 <a class="voltar-home">Voltar para página inicial?</a>
                 <a href="/home" class="clique-aqui">Clique aqui</a>
-
 
             </div>
 

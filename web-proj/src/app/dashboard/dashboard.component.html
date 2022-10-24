@@ -6,20 +6,25 @@
         </a>
     </div>
     <br>
-    <h5><img src="assets/icons/fisher.png" style="height: 4em; margin-top: 3px;"><b>Pescadores</b></h5>
-    <div style="margin-top: 3vh; display:flex;">
+    <h5><img src="assets/icons/fisher.png" style="height: 4em;"><b>Pescadores</b></h5>
 
-        <div class="filtred-cards" *ngFor="let grup of groups">
-            <div style="margin-top: 3vh; margin-left: 3vw; margin-bottom: 3vh;" class="key-grup"> <h5><b>{{grup.key}}</b></h5></div>
+    <div class="filtred-cards" *ngFor="let grup of groups">
+        <div style="margin-top: 3vh; margin-left: 3vw; margin-bottom: 3vh;" class="key-grup">
+            <h5><b>{{grup.key}}</b></h5>
+        </div>
 
+        <div style="margin-top: 3vh; display:flex; flex-wrap: wrap;">
             <div class="card" style="width: 12.5rem; height: 12.5rem; margin-left: 3vw;"
                 *ngFor="let person of grup.values">
                 <div class="card-body">
                     <h5 class="card-title">{{person.name}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{grup.key}}</h6>
                     <p class="card-text">{{person.fishes}}</p>
-                    <a href="{{goToWpp(person.phoneNumber)}}"  target="_blank" style="float: right; height: 2.5em; margin-top: 4vh;"><img src="assets/icons/wpp.png"
+                    <a href="{{goToWpp(person.phoneNumber)}}" target="_blank"
+                        style="float: right; height: 2.5em; margin-top: 4vh;"><img src="assets/icons/wpp.png"
                             style="height: 2.5em;"></a>
                 </div>
             </div>
         </div>
+
+    </div>
