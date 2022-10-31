@@ -1,12 +1,9 @@
 <app-nav></app-nav>
 <div style="margin-top: 3vh;">
     
-    <form class="d-flex form-search" role="search">
-       
+    <form class="d-flex form-search" role="search" style="margin-left: 1vw; margin-bottom: 4vh;">    
         <input matInput [(ngModel)]="search" person.data="persons" person.searchKeyword="keyword" class="form-control search me-1 " 
         type="search" placeholder="Pesquise por produtos.." aria-label="Search" name="search">
-       
-     
     </form>
 
     <div class="buttons" style="display: flex; margin-bottom: 2vh;" *ngIf="token=='admin'">
@@ -16,7 +13,7 @@
     </div>
 
     <br>
-    <div class="nome-grupo" *ngIf="search != ''"> Resultado da pesquisa: {{search}}</div>
+    <div class="nome-grupo" *ngIf="search != ''" style="margin: 1vw;"><h3> <b> Resultado da pesquisa: {{search}} </b></h3></div>
     <br>
 
     <h2><img src="assets/icons/fisher.png" style="height: 4em;"><b>Pescadores</b></h2>

@@ -50,4 +50,29 @@
         margin-bottom: 50px !important;  
     }
 
+    .search{
+        width: 30vw;
+        margin-left: 0vw;
+        height: 50px;
+        margin-top: 5px; 
+        font-weight: bold;
+        
+    }
+
+}
+
+.search{
+    font-weight: bold !important;
+}
+
+@media screen and (MIN-width: 800px) {
+
+    .search{
+        width: 40vw !important;
+        margin-left: 0vw !important;
+        height: 50px !important;
+        margin-top: 5px !important; 
+        font-weight: bold !important;
+        
+    }
 }
