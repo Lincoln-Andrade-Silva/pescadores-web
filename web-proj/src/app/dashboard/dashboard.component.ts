@@ -14,6 +14,9 @@ export class DashboardComponent implements OnInit {
   persons: Person[] = [];
   groups: any[] = [];
   token?: string;
+  search: string = '';
+  field: string = 'fishes';
+  keyword: string = 'fishes'
 
   constructor(private service: ServiceService, private localService: LocalStorageService) { }
 

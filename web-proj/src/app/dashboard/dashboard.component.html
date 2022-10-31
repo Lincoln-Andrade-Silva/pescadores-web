@@ -1,21 +1,36 @@
 <app-nav></app-nav>
 <div style="margin-top: 3vh;">
+    
+    <form class="d-flex form-search" role="search">
+       
+        <input matInput [(ngModel)]="search" person.data="persons" person.searchKeyword="keyword" class="form-control search me-1 " 
+        type="search" placeholder="Pesquise por produtos.." aria-label="Search" name="search">
+       
+     
+    </form>
+
     <div class="buttons" style="display: flex; margin-bottom: 2vh;" *ngIf="token=='admin'">
         <a href="/cadastrar/pescador" style="text-decoration: none;" class="addBut">
             <a style="color: white; font-size: 13px; text-decoration: none; font-weight: bold;">+ Pescador</a>
         </a>
     </div>
+
     <br>
+    <div class="nome-grupo" *ngIf="search != ''"> Resultado da pesquisa: {{search}}</div>
+    <br>
+
     <h2><img src="assets/icons/fisher.png" style="height: 4em;"><b>Pescadores</b></h2>
 
     <div class="filtred-cards" *ngFor="let grup of groups">
-        <div style="margin-top: 3vh; margin-left: 3vw; margin-bottom: 3vh;" class="key-grup">
+        <div style="margin-top: 3vh; margin-left: 3vw; margin-bottom: 3vh;" class="key-grup" *ngIf="search === ''">
             <h3><b>{{grup.key}}</b></h3>
         </div>
 
         <div style="display:flex; flex-wrap: wrap;" class="cards">
+            
             <div class="card" style="width: 12.5rem; height: 12.5rem;"
-                *ngFor="let person of grup.values">
+                *ngFor="let person of grup.values | filter: search: field.toLowerCase()">
+
                 <div class="card-body">
                     <h4 class="card-title"><b>{{person.name}}</b></h4>
                     <h5 class="card-subtitle mb-2 text-muted">{{grup.key}}</h5>
