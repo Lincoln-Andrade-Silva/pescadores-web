@@ -165,11 +165,10 @@ body {
 }
 
 .logo-peixe{
-    height: 3em;
     justify-content: center;
     display: flex;
     align-items: center;
-    margin-left: 40%;
+    margin-left: 28% !important;
 }
 
 .input-senha{
