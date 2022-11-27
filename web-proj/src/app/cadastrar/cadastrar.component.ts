@@ -46,8 +46,8 @@ export class CadastrarComponent implements OnInit {
     });
   }
 
-  update() {
-    this.service.atualizar(String(this.fisher.id),this.fisher).subscribe(() => {
+  update(person: Person) {
+    this.service.atualizar((person.id as any),this.fisher).subscribe(() => {
       this.router.navigate(['/home']);
     });
 

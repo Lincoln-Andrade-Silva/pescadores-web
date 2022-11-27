@@ -44,11 +44,11 @@
 
                 <div class="card-footer">
 
-                    <button type="button" style="border-radius: 50px;" class="btn btn-danger"
+                    <button *ngIf="editMode" type="button" style="border-radius: 50px;" class="btn btn-danger"
                         (click)="excluir(fisher)"><b>Excluir</b></button>
 
-                    <input ngIf="!editMode" type="submit" value="Cadastrar" class="submit" style="margin-top: 1vh;" (click)="create()">
-                    <input ngIf="editMode" type="submit" value="Cadastrar" class="submit" style="margin-top: 1vh;" (click)="update()">
+                    <input *ngIf="!editMode" type="submit" value="Cadastrar" class="submit" style="margin-top: 1vh;" (click)="create()">
+                    <input *ngIf="editMode" type="submit" value="Editar" class="submit" style="margin-top: 1vh;" (click)="update(fisher)">
 
                     <a class="voltar-home">Voltar para página inicial?</a>
                     <a href="/home" class="clique-aqui">Clique aqui</a>

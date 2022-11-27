@@ -33,7 +33,7 @@ export class genericCRUD<T> {
 
     const path = `${this.url}/${id}`;
 
-    return this.http.put<T>(path, tipo);
+    return this.http.patch<T>(path, tipo);
 
   }
 
