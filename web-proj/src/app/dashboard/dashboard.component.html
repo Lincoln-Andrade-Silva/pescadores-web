@@ -35,9 +35,8 @@
                     <a href="{{goToWpp(person.phoneNumber)}}" target="_blank"
                         style="float: right; height: 2.5em; margin-top: 4vh;"><img src="assets/icons/wpp.png"
                             style="height: 2.5em;"></a>
-                    <button type="button" class="btn btn-danger"
-                        (click)="excluir(person);" style="float: left !important; margin-bottom: 0 !important;
-                        margin-top: 4vh !important;"><b>Excluir</b></button>
+                    <button type="button" class="btn btn-outline-warning btn-editar" routerLink="/editar/pescador/{{person.id}}"
+                         style="float: left !important; margin-bottom: 0 !important; margin-top: 4vh !important;"><b>Editar</b></button>
                 </div>
             </div>
         </div>

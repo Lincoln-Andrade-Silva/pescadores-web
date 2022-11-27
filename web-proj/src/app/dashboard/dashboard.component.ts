@@ -41,9 +41,4 @@ export class DashboardComponent implements OnInit {
       string = "https://api.whatsapp.com/send?phone=+55"+number+"&text=Olá%20vim pelo Site !"
       return string;
     }
-    excluir(person: Person) {
-      this.service.excluir(person.id as any).subscribe(() => {
-        this.list()
-      });
-    }
 }

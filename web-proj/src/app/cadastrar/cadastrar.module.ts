@@ -6,6 +6,7 @@ import { CadastrarRotas } from "./cadastrar.routes";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
     declarations: [
@@ -18,6 +19,7 @@ import { MatSelectModule } from '@angular/material/select';
       ReactiveFormsModule,
       MatFormFieldModule,
       MatSelectModule,
+      MatInputModule
     ]
   })
   export class CadastrarModule { }

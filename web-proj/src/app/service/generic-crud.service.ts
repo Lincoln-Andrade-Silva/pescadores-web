@@ -13,7 +13,7 @@ export class genericCRUD<T> {
   }
 
 
-  buscarPorId(id : string) : Observable<T> {
+  buscarPorId(id : string) : Observable<Response<T>> {
 
     const path = `${this.url}/${id}`;
 

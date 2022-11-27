@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Person } from '../models/Person';
 import { State } from '../models/State';
 import { ServiceService } from '../service/service.service';
 import { StateService } from '../service/state.service';
+import { Response } from '../models/Response';
 
 @Component({
   selector: 'app-cadastrar',
@@ -14,18 +15,41 @@ export class CadastrarComponent implements OnInit {
 
   fisher: Person = new Person();
   states: State[] = [];
-  constructor(private router: Router, private service: ServiceService, private stateService: StateService) { }
+  editMode: boolean = false;
+  constructor(private route: ActivatedRoute, private router: Router, private service: ServiceService, private stateService: StateService) { }
 
   ngOnInit(): void {
     this.states = this.stateService.listAll();
-    console.log(this.states)
+    this.checkEditMode();
   }
 
   create() {
-    console.log(this.fisher)
     this.service.incluir(this.fisher).subscribe(() => {
       this.router.navigate(['/home']);
 
     })
+  }
+
+  checkEditMode() {
+    const str = this.route.snapshot.paramMap.get('id');
+    if (str != null) {
+      this.service.buscarPorId(str).subscribe((fisher : Response<any>) => {
+        this.fisher = fisher.data;
+      });
+      this.editMode = true;
+    }
+  }
+
+  excluir(person: Person) {
+    this.service.excluir(person.id as any).subscribe(() => {
+      this.router.navigate(['/home']);
+    });
+  }
+
+  update() {
+    this.service.atualizar(String(this.fisher.id),this.fisher).subscribe(() => {
+      this.router.navigate(['/home']);
+    });
+
   }
 }

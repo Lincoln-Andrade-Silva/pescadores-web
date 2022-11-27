@@ -1,60 +1,60 @@
 <body>
+        <div id="comprador">
 
-    <div id="comprador">
+            <form class="card" style="height: max-content !important;">
 
-        <form class="card">
+                <div class="card-header">
+                    <img class="logo-fisher" src="assets/icons/fisher.png" style="height: 5em;">
+                    <h2 class="text-center" style="font-weight: bold;">Cadastrar</h2>
+                </div>
 
-            <div class="card-header">
-                <img class="logo-fisher" src="assets/icons/fisher.png" style="height: 5em;">
-                <h2 class="text-center" style="font-weight: bold;">Cadastrar</h2>
-            </div>
+                <div class="card-content">
+                    <form class="form">
 
-            <div class="card-content">
-                <form class="form">
+                        <div class="card-content-area">
+                            <span>Nome</span>
+                            <input matInput required type="text" name="name" id="usuario" class="input-usuario"
+                                [(ngModel)]="fisher.name" autocomplete="off">
+                        </div>
 
-                    <div class="card-content-area">
-                        <mat-label>Nome</mat-label>
-                        <input matInput required type="text" name="name" id="usuario" class="input-usuario"
-                            [(ngModel)]="fisher.name" autocomplete="off">
-                    </div>
+                        <mat-form-field class="card-content-area">
+                            <mat-label>Venda</mat-label>
+                            <mat-select matSelect name="region" id="region" [(ngModel)]="fisher.region">
+                                <mat-option *ngFor="let state of states" [value]="state.name">
+                                    {{state.initials}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
 
-                    <mat-form-field  class="card-content-area" >
-                        <mat-label>Venda</mat-label>
-                        <mat-select matSelect name="region" id="region"
-                            [(ngModel)]="fisher.region">
-                            <mat-option *ngFor="let state of states" [value]="state.name">
-                                {{state.initials}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
+                        <div class="card-content-area">
+                            <span>Telefone</span>
+                            <input matInput required id="telefone" onkeyup="mascaraFone(event)" name="phoneNumber"
+                                [(ngModel)]="fisher.phoneNumber" />
+                        </div>
 
-                    <div class="card-content-area">
-                        <span>Telefone</span>
-                        <input matInput required id="telefone" onkeyup="mascaraFone(event)" name="phoneNumber"
-                            [(ngModel)]="fisher.phoneNumber" />
-                    </div>
+                        <div class="card-content-area">
+                            <span>Produtos</span>
+                            <input matInput required name="fishes" type="text" id="password" autocomplete="off"
+                                class="input-senha" [(ngModel)]="fisher.fishes">
 
-                    <div class="card-content-area">
-                        <span>Produtos</span>
-                        <input matInput required name="fishes" type="text" id="password" autocomplete="off"
-                            class="input-senha" [(ngModel)]="fisher.fishes">
+                        </div>
 
-                    </div>
-                    
-                </form>
-            </div>
+                    </form>
+                </div>
 
-            <div class="card-footer">
+                <div class="card-footer">
 
-                <input type="submit" value="Cadastrar" class="submit" (click)="create()">
+                    <button type="button" style="border-radius: 50px;" class="btn btn-danger"
+                        (click)="excluir(fisher)"><b>Excluir</b></button>
 
-                <a class="voltar-home">Voltar para página inicial?</a>
-                <a href="/home" class="clique-aqui">Clique aqui</a>
+                    <input type="submit" value="Cadastrar" class="submit" style="margin-top: 1vh;" (click)="create()">
 
-            </div>
+                    <a class="voltar-home">Voltar para página inicial?</a>
+                    <a href="/home" class="clique-aqui">Clique aqui</a>
 
-        </form>
+                </div>
 
-    </div>
+            </form>
 
+        </div>
 </body>
